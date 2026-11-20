@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1613;
+  --ink: #14110f;
+  --brand: #f28c1b;
+  --brand-dark: #d97706;
+  --sun: #ffc21a;
+  --leaf: #0f5b3a;
+  --sand: #f7f3ee;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ink: var(--ink);
+  --color-brand: var(--brand);
+  --color-brand-dark: var(--brand-dark);
+  --color-sun: var(--sun);
+  --color-leaf: var(--leaf);
+  --color-sand: var(--sand);
+  --font-sans: var(--font-geist-sans);
+  --font-display: Georgia, "Times New Roman", serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+/* kitenge-inspired pattern strip, pure CSS so it needs no image */
+.pattern-strip {
+  background-color: #7a2e0e;
+  background-image:
+    repeating-linear-gradient(45deg, #f28c1b 0 8px, transparent 8px 16px),
+    repeating-linear-gradient(-45deg, #0f5b3a 0 8px, transparent 8px 16px),
+    repeating-linear-gradient(90deg, #ffc21a 0 3px, transparent 3px 24px);
+  background-blend-mode: normal;
+}
+
+.hero-bg {
+  background:
+    radial-gradient(ellipse at 78% 30%, rgba(255, 194, 26, 0.55), transparent 55%),
+    linear-gradient(180deg, #7aa7c7 0%, #cfe0d3 45%, #c8a35a 70%, #5a4a1f 100%);
+}
+
+.dropdown {
+  @apply invisible absolute left-0 top-full z-50 min-w-56 translate-y-1 rounded-xl bg-white p-2 opacity-0 shadow-xl ring-1 ring-black/5 transition;
+}
+/* hover opens it; keyboard focus opens it too, but a mouse click no longer leaves it stuck open */
+.has-dropdown:hover .dropdown,
+.has-dropdown:has(:focus-visible) .dropdown {
+  @apply visible translate-y-0 opacity-100;
+}

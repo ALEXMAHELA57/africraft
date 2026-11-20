@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 240" preserveAspectRatio="xMidYMid slice">
+<defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5f9bd0"/><stop offset="1" stop-color="#f7dfa5"/></linearGradient></defs>
+<rect width="300" height="240" fill="url(#s)"/>
+<polygon points="20,160 100,95 150,70 200,95 290,160" fill="#7a8ca8"/>
+<polygon points="150,70 105,92 120,98 135,105 150,98 165,106 180,96 196,92" fill="#fff"/>
+<rect y="150" width="300" height="90" fill="#9a8a3a"/>
+<path d="M230,175 V150 M230,150 q-25,-10 -40,0 M230,150 q25,-12 42,-2" stroke="#3b2a18" stroke-width="3" fill="none"/>
+<ellipse cx="230" cy="146" rx="42" ry="8" fill="#4b6b2e"/>
+</svg>
