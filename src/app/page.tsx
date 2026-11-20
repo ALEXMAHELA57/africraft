@@ -88,20 +88,24 @@ export default function Home() {
               Shop local products, book amazing experiences, and explore Africa&apos;s rich heritage, all in one place.
             </p>
 
-            <form action="/search" className="mt-7 flex max-w-xl items-center rounded-full bg-white p-1.5 shadow-lg focus-within:ring-4 focus-within:ring-sun/60">
-              <Search size={20} className="ml-3 shrink-0 text-neutral-500" aria-hidden />
+            <form
+              action="/search"
+              role="search"
+              className="mt-7 flex max-w-xl items-center rounded-full bg-white px-4 py-1 shadow-lg focus-within:ring-4 focus-within:ring-white/50"
+            >
+              <button type="submit" aria-label="Search" className="shrink-0 rounded-full p-1.5 text-neutral-500 hover:text-ink">
+                <Search size={20} aria-hidden />
+              </button>
               <label htmlFor="q" className="sr-only">
                 Search
               </label>
               <input
                 id="q"
                 name="q"
-                placeholder="Search for products, destinations, articles..."
-                className="min-w-0 flex-1 bg-transparent px-3 py-2 text-ink outline-none placeholder:text-neutral-500"
+                enterKeyHint="search"
+                placeholder="Search products, places, articles"
+                className="min-w-0 flex-1 bg-transparent px-2 py-3 text-ink outline-none placeholder:text-neutral-500"
               />
-              <button className="rounded-full bg-sun px-6 py-2.5 font-semibold text-ink hover:bg-brand">
-                Search
-              </button>
             </form>
 
             <div className="mt-4 flex flex-wrap gap-2">
@@ -121,7 +125,6 @@ export default function Home() {
               ))}
             </div>
           </div>
-
         </div>
       </section>
 
