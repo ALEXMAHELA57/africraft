@@ -76,13 +76,6 @@ export const NAV: NavItem[] = [
   },
 ];
 
-export const QUICK_SERVICES = [
-  { label: "Book a Safari Tour", sub: "from $120", href: "/tourism", icon: "safari" },
-  { label: "Find Hotels", sub: "from $50/night", href: "/tourism/accommodation", icon: "hotel" },
-  { label: "Arrange Transport", sub: "Airport & Local", href: "/tourism/transport", icon: "car" },
-  { label: "Explore Culture", sub: "Music, Dance & More", href: "/culture", icon: "culture" },
-] as const;
-
 /**
  * Image helper. Drop a real photo at public/images/<name>.jpg and it is used
  * automatically; if that file does not exist the browser skips it and shows

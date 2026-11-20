@@ -3,7 +3,6 @@ import {
   ArrowRight,
   Bed,
   Car,
-  ChevronRight,
   CalendarDays,
   MapPin,
   Music,
@@ -15,19 +14,11 @@ import {
   Users,
   Drama,
   Plane,
-  TentTree,
   Calendar,
   Heart,
 } from "lucide-react";
-import { DESTINATIONS, QUICK_SERVICES, bg } from "@/lib/site";
+import { DESTINATIONS, bg } from "@/lib/site";
 import { ARTICLES } from "@/data/content";
-
-const SERVICE_ICONS = {
-  safari: TentTree,
-  hotel: Bed,
-  car: Car,
-  culture: Music,
-} as const;
 
 const STRIP = [
   { label: "Marketplace", sub: "Buy & Sell", href: "/marketplace", Icon: ShoppingBag },
@@ -88,8 +79,8 @@ export default function Home() {
         style={{ backgroundImage: bg("hero") }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/20 to-transparent" aria-hidden />
-        <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 py-14 lg:grid-cols-[1fr_320px] lg:py-20">
-          <div className="min-w-0">
+        <div className="relative mx-auto max-w-7xl px-4 py-14 lg:py-20">
+          <div className="min-w-0 max-w-3xl">
             <h1 className="font-display text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
               Discover the beauty, culture and opportunities of <span className="text-sun">Africa.</span>
             </h1>
@@ -131,35 +122,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Quick services */}
-          <aside className="self-start overflow-hidden rounded-2xl bg-black/45 shadow-xl backdrop-blur">
-            <h2 className="px-5 py-3 text-lg font-bold text-sun">Quick Services</h2>
-            <ul className="bg-white text-ink">
-              {QUICK_SERVICES.map((s) => {
-                const Icon = SERVICE_ICONS[s.icon];
-                return (
-                  <li key={s.label} className="border-b border-black/5 last:border-0">
-                    <Link href={s.href} className="flex items-center gap-3 px-4 py-3 hover:bg-sand">
-                      <Icon size={28} className="shrink-0 text-ink" aria-hidden />
-                      <span className="flex-1">
-                        <span className="block text-sm font-semibold">{s.label}</span>
-                        <span className="block text-xs text-neutral-500">{s.sub}</span>
-                      </span>
-                      <ChevronRight size={16} className="text-neutral-400" aria-hidden />
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-            <div className="bg-white px-4 pb-4">
-              <Link
-                href="/tourism"
-                className="flex items-center justify-center gap-2 rounded-lg bg-sun py-2.5 font-semibold text-ink hover:bg-brand"
-              >
-                Get Started <ArrowRight size={16} aria-hidden />
-              </Link>
-            </div>
-          </aside>
         </div>
       </section>
 
