@@ -88,7 +88,7 @@ export default function Home() {
               Shop local products, book amazing experiences, and explore Africa&apos;s rich heritage, all in one place.
             </p>
 
-            <form action="/search" className="mt-7 flex max-w-xl items-center rounded-full bg-white p-1.5 shadow-lg">
+            <form action="/search" className="mt-7 flex max-w-xl items-center rounded-full bg-white p-1.5 shadow-lg focus-within:ring-4 focus-within:ring-sun/60">
               <Search size={20} className="ml-3 shrink-0 text-neutral-500" aria-hidden />
               <label htmlFor="q" className="sr-only">
                 Search
@@ -97,7 +97,7 @@ export default function Home() {
                 id="q"
                 name="q"
                 placeholder="Search for products, destinations, articles..."
-                className="min-w-0 flex-1 bg-transparent px-3 py-2 text-ink outline-none placeholder:text-neutral-400"
+                className="min-w-0 flex-1 bg-transparent px-3 py-2 text-ink outline-none placeholder:text-neutral-500"
               />
               <button className="rounded-full bg-sun px-6 py-2.5 font-semibold text-ink hover:bg-brand">
                 Search
